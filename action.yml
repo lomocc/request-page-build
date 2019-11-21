@@ -1,10 +1,13 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: "request-page-build"
+description: "Manually triggering gh-pages build"
+author: "Vincent"
 inputs:
-  myInput:              # change this
-    description: 'input description here'
-    default: 'default value if applicable'
+  owner:
+    description: "target owner name, https://github.com/{owner}/{repo}"
+    required: false
+  repo:
+    description: "target repo name, https://github.com/{owner}/{repo}"
+    required: false
 runs:
-  using: 'node12'
-  main: 'lib/main.js'
+  using: "node12"
+  main: "lib/main.js"

@@ -1,8 +1,8 @@
 {
-  "name": "typescript-action",
+  "name": "request-page-build",
   "version": "0.0.0",
   "private": true,
-  "description": "TypeScript template action",
+  "description": "Manually triggering gh-pages build",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -10,17 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/lomocc/request-page-build.git"
   },
   "keywords": [
     "actions",
     "node",
-    "setup"
+    "request-page-build"
   ],
-  "author": "YourNameOrOrganization",
+  "author": "Vincent",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.0.0"
+    "@actions/core": "^1.0.0",
+    "@actions/github": "^1.1.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",

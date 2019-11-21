@@ -1,16 +1,11 @@
-import * as core from '@actions/core';
-import {wait} from './wait'
+import * as core from "@actions/core";
+import { requestPageBuild } from "./request-page-build";
 
 async function run() {
   try {
-    const ms = core.getInput('milliseconds');
-    console.log(`Waiting ${ms} milliseconds ...`)
-
-    core.debug((new Date()).toTimeString())
-    await wait(parseInt(ms, 10));
-    core.debug((new Date()).toTimeString())
-
-    core.setOutput('time', new Date().toTimeString());
+    const owner = core.getInput("owner", { required: false });
+    const repo = core.getInput("repo", { required: false });
+    await requestPageBuild(owner, repo);
   } catch (error) {
     core.setFailed(error.message);
   }
