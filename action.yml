@@ -1,0 +1,13 @@
+name: "request-page-build"
+description: "Manually triggering gh-pages build"
+author: "Vincent"
+inputs:
+  owner:
+    description: "target owner name, https://github.com/{owner}/{repo}"
+    required: false
+  repo:
+    description: "target repo name, https://github.com/{owner}/{repo}"
+    required: false
+runs:
+  using: "node12"
+  main: "dist/index.js"
